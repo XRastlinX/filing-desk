@@ -1,0 +1,5 @@
+refuse
+agent-a: land elegxis -> elegxis: land: elegxis on flow-check-count | refuse biaschisis -> leiorrhoe: refuse: biaschisis is not leiorrhoe on flow-check-count
+agent-b: not sent
+reason: only one agent ran; Codex and Antigravity were not handed the package
+agreement is not a proof
