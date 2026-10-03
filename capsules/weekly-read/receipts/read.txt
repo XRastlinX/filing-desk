@@ -1,0 +1,5 @@
+refuse
+missing: a landing is not an apply
+leiorrhoe is open
+hook absent
+files: .git/hooks
