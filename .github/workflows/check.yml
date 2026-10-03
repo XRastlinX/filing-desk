@@ -8,3 +8,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: refuse a draft that does not recover
         run: python3 hive/consensus-mirror/scripts/consensus_mirror.py consensus-mirror/PROMPT.md
+      - name: show one landing and one refusal
+        run: python3 examples/show.py
