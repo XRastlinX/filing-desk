@@ -1,0 +1,10 @@
+{
+  "authority_effect": "NONE",
+  "land": "elegxis -> elegxis: land: elegxis on flow-check-count",
+  "refuse": "biaschisis -> leiorrhoe: refuse: biaschisis is not leiorrhoe on flow-check-count",
+  "must_not": [
+    "apply",
+    "archive",
+    "change standing"
+  ]
+}
