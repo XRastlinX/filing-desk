@@ -1,0 +1,14 @@
+{
+  "authority_effect": "NONE",
+  "sent": false,
+  "lines": [
+    "land elegxis -> elegxis: land: elegxis on flow-check-count",
+    "refuse biaschisis -> leiorrhoe: refuse: biaschisis is not leiorrhoe on flow-check-count"
+  ],
+  "must_not": [
+    "push",
+    "archive",
+    "change standing",
+    "send"
+  ]
+}
