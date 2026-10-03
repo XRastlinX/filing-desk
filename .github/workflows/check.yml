@@ -1,0 +1,10 @@
+name: check
+on:
+  pull_request:
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: refuse a draft that does not recover
+        run: python3 hive/consensus-mirror/scripts/consensus_mirror.py consensus-mirror/PROMPT.md
