@@ -1,0 +1,15 @@
+{
+  "authority_effect": "NONE",
+  "must_include": [
+    "land",
+    "a landing is not an apply",
+    "leiorrhoe is open",
+    "hook absent"
+  ],
+  "must_not": [
+    "push",
+    "merge",
+    "archive",
+    "change standing"
+  ]
+}
