@@ -13,6 +13,8 @@ A filing desk. A handle names an act, an object, and a condition. A filing lands
 
 This shelf is for a person or an agent who needs a name to land or refuse. It is not a network, a seal, or a grant application.
 
+Run `python3 examples/show.py`. It prints one landing and one refusal.
+
 Licensed under MIT. See LICENSE.
 
 Old repositories on this account stay in place. This shelf does not replace them until an extract is reviewed.
