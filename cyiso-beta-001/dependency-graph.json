@@ -1,0 +1,89 @@
+{
+  "schema": "cyiso.dependency-graph.v0.1",
+  "nodes": [
+    {
+      "id": "envelope-core",
+      "type": "core"
+    },
+    {
+      "id": "residue-inventory",
+      "type": "inventory"
+    },
+    {
+      "id": "state-snapshot",
+      "type": "state"
+    },
+    {
+      "id": "coverage-manifest",
+      "type": "manifest"
+    },
+    {
+      "id": "omission-manifest",
+      "type": "manifest"
+    },
+    {
+      "id": "compaction-loss-report",
+      "type": "report"
+    },
+    {
+      "id": "dependency-graph",
+      "type": "graph"
+    },
+    {
+      "id": "replay-contract",
+      "type": "contract"
+    },
+    {
+      "id": "identity-passport-ref",
+      "type": "ref"
+    }
+  ],
+  "edges": [
+    {
+      "from": "state-snapshot",
+      "to": "residue-inventory",
+      "kind": "references"
+    },
+    {
+      "from": "coverage-manifest",
+      "to": "residue-inventory",
+      "kind": "covers"
+    },
+    {
+      "from": "coverage-manifest",
+      "to": "state-snapshot",
+      "kind": "covers"
+    },
+    {
+      "from": "coverage-manifest",
+      "to": "dependency-graph",
+      "kind": "covers"
+    },
+    {
+      "from": "coverage-manifest",
+      "to": "replay-contract",
+      "kind": "covers"
+    },
+    {
+      "from": "coverage-manifest",
+      "to": "identity-passport-ref",
+      "kind": "covers"
+    },
+    {
+      "from": "replay-contract",
+      "to": "state-snapshot",
+      "kind": "replays"
+    },
+    {
+      "from": "replay-contract",
+      "to": "residue-inventory",
+      "kind": "replays"
+    },
+    {
+      "from": "envelope-core",
+      "to": "dependency-graph",
+      "kind": "requires"
+    }
+  ],
+  "admitted_subset_must_be_closed": true
+}

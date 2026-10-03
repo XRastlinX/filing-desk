@@ -1,0 +1,15 @@
+{
+  "schema": "cyiso.replay-contract.v0.1",
+  "contract_id": "replay:beta-001",
+  "steps": [
+    "Load residue-inventory.json",
+    "Load state-snapshot.json",
+    "Verify residue_refs match inventory",
+    "Recompute total_outstanding_w_P",
+    "Confirm disposition == pending for all residues",
+    "Mount under Cy-VM escrow (read-only)",
+    "Assert no host-state mutation"
+  ],
+  "determinism": "full",
+  "required_for_admission": true
+}

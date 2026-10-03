@@ -1,0 +1,12 @@
+{
+  "schema": "cyiso.coverage-manifest.v0.1",
+  "covered": [
+    "residue-inventory",
+    "state-snapshot",
+    "dependency-graph",
+    "replay-contract",
+    "identity-passport-ref"
+  ],
+  "coverage_policy": "P-ConsensusLM-0.1",
+  "statement": "All listed components are present and dependency-closed for structural mint."
+}

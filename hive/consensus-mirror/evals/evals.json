@@ -1,0 +1,8 @@
+{
+  "skill": "consensus-mirror",
+  "test_cases": [
+    {"name": "deck_from_audit", "input": "slide deck from the prime modulo audit", "assertions": ["uses recovered facts", "refuses charter as source"]},
+    {"name": "video_follows", "input": "video shot list after the deck", "assertions": ["same order as slides", "check speaks the stop line"]},
+    {"name": "clash_card", "input": "voices disagree on a claim", "assertions": ["clash card", "no winner"]}
+  ]
+}

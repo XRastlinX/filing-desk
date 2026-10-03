@@ -1,0 +1,6 @@
+{
+  "schema": "cyiso.compaction-loss-report.v0.1",
+  "operator": "identity",
+  "losses": [],
+  "statement": "No compaction applied in beta-001. Report is empty by design."
+}

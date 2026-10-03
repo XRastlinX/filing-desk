@@ -1,0 +1,6 @@
+{
+  "schema": "cyiso.identity-passport-ref.v0.1",
+  "ref_type": "placeholder",
+  "passport_id": "passport:structural-beta-only",
+  "note": "No production passport. Structural mint only. UNSIGNED."
+}

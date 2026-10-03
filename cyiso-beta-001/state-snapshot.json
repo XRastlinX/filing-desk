@@ -1,0 +1,16 @@
+{
+  "schema": "cyiso.state-snapshot.v0.1",
+  "snapshot_id": "snap:beta-001",
+  "node_id": "Node_Source_Beta",
+  "timestamp": "2026-07-23T14:00:00Z",
+  "cognitive_state": {
+    "active_context": "Consensus LM structural beta mint",
+    "mode": "escrow_preparation",
+    "local_b": 1.5,
+    "notes": "No live cognitive transfer. Structure only."
+  },
+  "residue_refs": [
+    "res:sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "res:sha256:2222222222222222222222222222222222222222222222222222222222222222"
+  ]
+}

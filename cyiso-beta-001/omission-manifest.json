@@ -1,0 +1,21 @@
+{
+  "schema": "cyiso.omission-manifest.v0.1",
+  "intentionally_omitted": [
+    {
+      "item": "full cognitive trajectory history",
+      "reason": "beta is structural only; trajectory not required for escrow test",
+      "loss_class": "non-critical"
+    },
+    {
+      "item": "production identity certificates",
+      "reason": "unsigned beta; no fabricated authority",
+      "loss_class": "by-design"
+    },
+    {
+      "item": "network routing metadata",
+      "reason": "NO_RUNTIME_EFFECT; network effect none",
+      "loss_class": "by-design"
+    }
+  ],
+  "omission_policy": "P-ConsensusLM-0.1-loss-accounting"
+}

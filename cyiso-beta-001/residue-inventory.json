@@ -1,0 +1,28 @@
+{
+  "schema": "cyiso.residue-inventory.v0.1",
+  "residues": [
+    {
+      "residue_id": "res:sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "derived_from": null,
+      "source_node_id": "Node_Source_Beta",
+      "current_custodian": "Node_Source_Beta",
+      "w_P": 1.0,
+      "created_at": "2026-07-23T14:00:00Z",
+      "disposition": "pending",
+      "policy_pin": "P-ConsensusLM-0.1",
+      "description": "Structural beta test residue — workload unit for inheritance accounting"
+    },
+    {
+      "residue_id": "res:sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "derived_from": null,
+      "source_node_id": "Node_Source_Beta",
+      "current_custodian": "Node_Source_Beta",
+      "w_P": 0.5,
+      "created_at": "2026-07-23T14:00:01Z",
+      "disposition": "pending",
+      "policy_pin": "P-ConsensusLM-0.1",
+      "description": "Secondary residue for dependency-closure test"
+    }
+  ],
+  "total_outstanding_w_P": 1.5
+}

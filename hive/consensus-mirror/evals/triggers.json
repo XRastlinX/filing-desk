@@ -1,0 +1,10 @@
+{
+  "skill": "consensus-mirror",
+  "test_cases": [
+    {"input": "make the studio slide deck and video from the deep dive", "should_trigger": true},
+    {"input": "notebook prompt with witness and check voices", "should_trigger": true},
+    {"input": "consensus mirror the audit", "should_trigger": true},
+    {"input": "install the pre-commit hook", "should_trigger": false},
+    {"input": "solve navier-stokes", "should_trigger": false}
+  ]
+}
