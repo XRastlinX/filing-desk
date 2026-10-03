@@ -1,6 +1,6 @@
 # filing-desk
 
-A filing desk. A handle names an act, an object, and a condition. A filing lands only when those slots match. A landing does not change standing. This repository does not apply, archive, or close an open claim.
+A filing desk. A handle names an act, an object, and a condition. A filing lands only when those slots match. A landing is not an apply and does not change standing. This repository does not apply, archive, or close an open claim.
 
 | Handle | Standing | Non-claim |
 | --- | --- | --- |
