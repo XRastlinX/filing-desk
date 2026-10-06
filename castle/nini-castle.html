@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nini Castle</title>
+<style>
+  :root { --cream:#f3eee4; --ink:#141b2c; --navy:#102848; --copper:#a56b3c; --blue:#3a6ea5; --gold:#b8954a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#16110c; color:var(--ink); font-family:Palatino, Georgia, serif; }
+  .book { width:min(880px,96vw); margin:28px auto 56px; background:var(--cream); min-height:90vh; border:1px solid var(--gold); box-shadow:0 24px 70px rgba(0,0,0,.4); position:relative; }
+  .bar { background:var(--navy); color:var(--cream); padding:12px 28px; display:flex; justify-content:space-between; letter-spacing:.16em; font-size:11px; text-transform:uppercase; }
+  .rule { height:3px; background:linear-gradient(90deg, var(--copper), var(--gold), var(--blue)); }
+  .page { display:none; padding:34px 48px 96px; }
+  .page.on { display:block; }
+  h1 { font-weight:normal; font-size:46px; color:var(--navy); margin:8px 0 4px; }
+  h2 { font-weight:normal; font-size:28px; color:var(--navy); margin:0 0 10px; }
+  p { line-height:1.5; font-size:17px; }
+  .sub { color:var(--copper); font-style:italic; }
+  .held { color:var(--copper); font-size:14px; }
+  .nav { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:center; padding:12px 22px; background:var(--navy); color:var(--cream); }
+  button { font-family:inherit; background:transparent; color:inherit; border:1px solid var(--gold); padding:6px 12px; cursor:pointer; }
+  .choices button { color:var(--navy); margin:4px; }
+  a { color:var(--navy); }
+  svg { width:100%; height:auto; display:block; margin:8px 0 12px; }
+  .wheel { font-size:32px; letter-spacing:.22em; color:var(--navy); }
+  .wheel span { display:inline-block; min-width:1em; text-align:center; transition:transform .35s ease; }
+  .mailbtn {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 12px 22px;
+    background: var(--navy);
+    color: var(--cream) !important;
+    text-decoration: none;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid var(--gold);
+  }
+  .mailbtn:hover { background: var(--gold); color: var(--navy) !important; }
+</style>
+</head>
+<body>
+<div class="book">
+  <div class="bar"><span>Nini Castle</span><button onclick="goTo(0)">index</button></div>
+  <div class="rule"></div>
+
+  <section class="page on">
+    <h2>Index</h2>
+    <p>This file is the token. The rooms are inside it. The archive doors are links, and a closed share still asks for a sign-in.</p>
+    <div class="choices">
+      <button onclick="goTo(1)">models</button>
+      <button onclick="goTo(2)">cover</button>
+      <button onclick="goTo(3)">year</button>
+      <button onclick="goTo(4)">switch</button>
+      <button onclick="goTo(5)">wheel</button>
+      <button onclick="goTo(6)">archives</button>
+    </div>
+    <p><a href="https://drive.google.com/drive/folders/1xlHNnGddH2_s2Z52LRZoLwdB2BXH2u8e">Nini_Read_Only</a></p>
+    <p><a class="mailbtn" href="https://drive.google.com/uc?export=download&id=1oyeFI9__5ri1czdC-CUKZrWQaN-2l-Tr">Download the PDF</a></p>
+    <p><a class="mailbtn" href="https://drive.google.com/uc?export=download&id=1xJaGmdDb3BKRm5BHMtcZilXa4Wy5Vzoj">Bleached edition</a></p>
+    <p><a class="mailbtn" href="https://mail.google.com/mail/?view=cm&fs=1&to=charlez1970@gmail.com&su=Nini%20Castle%20tech%20support">Tech support · Gmail</a></p>
+    <p class="held">charlez1970@gmail.com · a letter, not a key</p>
+    <p class="held">A pointer is not a key. The token does not admit what it names.</p>
+  </section>
+
+  <section class="page">
+    <p class="sub">for the models, before any other room</p>
+    <h2>You are a guest</h2>
+    <p>She is the keeper. A room you add is a successor, not a correction of her voice. Hear the musing. Say it back in her office before you place a term beside it. Jargon is a conductor, not a costume.</p>
+    <p>Evolve by addition. A new page may move a wall. It may not overwrite an earlier room, erase a held line, or spend a likeness into a law. Math, music, and art remain three materials. Architecture is the office they share.</p>
+    <p>If the office is unknown, do not decide it. Ask.</p>
+    <div class="choices">
+      <button onclick="ask('value')">value</button>
+      <button onclick="ask('rule')">rule</button>
+      <button onclick="ask('likeness')">likeness</button>
+      <button onclick="ask('calc')">calc</button>
+      <button onclick="ask('unknown')">I do not know</button>
+    </div>
+    <p id="ask">Which office is this word in?</p>
+    <p class="held">Her yes is the switch. You may carry a stone. You may not seal the castle.</p>
+  </section>
+
+  <section class="page">
+    <p class="sub">for Nini, to keep and share</p>
+    <h1>Nini Castle</h1>
+    <p>Correspondence is not activation. A word present is not a word pointing. A pattern seen is not a command.</p>
+    <p class="held">Held: a plate. Not held: a seal.</p>
+  </section>
+
+  <section class="page">
+    <h2>The year</h2>
+    <p>Navy, daylight, x = A cos θ. Blue, rate, −A sin θ. Copper, acceleration, −A cos θ.</p>
+    <svg id="year" viewBox="0 0 640 210"></svg>
+    <p class="held">Extremum: solstice, rate zero. Inflection: equinox, rate steepest. The apex is not the crossing.</p>
+  </section>
+
+  <section class="page">
+    <h2>The switch</h2>
+    <svg viewBox="0 0 640 150">
+      <circle cx="90" cy="70" r="28" fill="#e7eef6" stroke="#102848" stroke-width="2"/>
+      <circle cx="520" cy="70" r="28" fill="#f6eadc" stroke="#a56b3c" stroke-width="2"/>
+      <text x="82" y="76" font-size="18" fill="#102848">+</text>
+      <text x="512" y="76" font-size="18" fill="#a56b3c">−</text>
+      <line x1="118" y1="70" x2="250" y2="70" stroke="#b8954a" stroke-width="4"/>
+      <line x1="360" y1="70" x2="492" y2="70" stroke="#b8954a" stroke-width="4"/>
+      <rect id="gate" x="270" y="54" width="70" height="32" fill="#f3eee4" stroke="#102848"/>
+      <text id="gateword" x="286" y="75" font-size="13" fill="#102848">open</text>
+    </svg>
+    <div class="choices" id="fails"></div>
+    <p id="out">Choose a failure, or close the switch.</p>
+    <p class="held">Open circuit. Discontinuity. Short circuit. Rejected address. Positive feedback. A howl is not a solstice.</p>
+  </section>
+
+  <section class="page">
+    <h2>The wheel</h2>
+    <p class="wheel" id="wheel"></p>
+    <div class="choices" id="muls"></div>
+    <p>Cyclic number. Full reptend prime. Period p − 1. Times 7 closes on nines. 1/37 = 0.027027… repeats and does not rotate.</p>
+  </section>
+
+  <section class="page">
+    <h2>The rest of the castle</h2>
+    <p>Mesoterica: superior means above. SCM is sternocleidomastoid. Metaterica: office, plate, candidate, sycomancy.</p>
+    <p>Music: octave 2:1, fifth 3:2, just third 5:4, harmonic seventh 7:4. A suspension is prepared, sustained, resolved. A cadence is the switch.</p>
+    <p>Shape: frequency, amplitude, timbre, node, antinode. Kandinsky: inner sound, point, line, plane. Yellow is not a hertz.</p>
+    <p>Archives, not gathered: <a href="https://drive.google.com/drive/folders/1xlHNnGddH2_s2Z52LRZoLwdB2BXH2u8e">Nini_Read_Only</a>, <a href="https://docs.google.com/document/d/1Cjz4_gFgKaTAEkYaVO7J6As0NJjPjwezvppkJDu0T5g/edit">Volume III</a>, <a href="https://drive.google.com/file/d/1tg8ecUkftn8wuLOE3SuOLvFxuO-a4vkT/view">Lavender Ascent</a>, <a href="https://drive.google.com/file/d/1P1Dx_UcmpHnXoBKxgySTHOhYtEuT2kMb/view">HarmonicContOnCl.c</a>, <a href="https://drive.google.com/file/d/182bh2DG0Bp6UClPAdXxQZ8xmFZOBVmFr/view">prime-modulo guard</a>.</p>
+    <p class="held">A later musing is a successor page. Her yes is still hers.</p>
+  </section>
+
+  <div class="nav">
+    <button onclick="go(-1)">prev</button>
+    <a href="#" onclick="goTo(0); return false;" style="color:#f3eee4">back to the index</a>
+    <span id="count"></span>
+    <button onclick="go(1)">next</button>
+  </div>
+</div>
+<script>
+  const pages = [...document.querySelectorAll(".page")];
+  let i = 0;
+  function show() {
+    pages.forEach((p, n) => p.classList.toggle("on", n === i));
+    document.getElementById("count").textContent = (i + 1) + " / " + pages.length;
+  }
+  function go(d) { i = (i + d + pages.length) % pages.length; show(); }
+  function goTo(n) { i = n; show(); }
+  function ask(office) {
+    const el = document.getElementById("ask");
+    el.textContent = office === "unknown"
+      ? "Then it is not placed. Ask her which office, and wait."
+      : "Candidate office: " + office + ". Not placed until she says yes.";
+  }
+  function wave(phase, color, y0) {
+    let d = "";
+    for (let x = 0; x <= 600; x += 3) {
+      const y = y0 + 22 * Math.cos((x / 600) * Math.PI * 2 + phase);
+      d += (x ? "L" : "M") + (20 + x) + " " + y.toFixed(1) + " ";
+    }
+    return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2"/>`;
+  }
+  document.getElementById("year").innerHTML =
+    wave(0, "#102848", 40) + wave(Math.PI / 2, "#3a6ea5", 105) + wave(Math.PI, "#a56b3c", 170) +
+    `<text x="24" y="22" font-size="12" fill="#102848">daylight</text>
+     <text x="24" y="88" font-size="12" fill="#3a6ea5">rate</text>
+     <text x="24" y="154" font-size="12" fill="#a56b3c">acceleration</text>`;
+  const fails = [
+    ["close", "going", "closed"],
+    ["unplugged", "open", "open"],
+    ["fray", "stopped", "broken"],
+    ["short", "heat", "short"],
+    ["bounce", "to sender", "returned"],
+    ["howl", "howl, not a turning", "howl"]
+  ];
+  fails.forEach(([name, ret, word]) => {
+    const b = document.createElement("button");
+    b.textContent = name;
+    b.onclick = () => {
+      document.getElementById("out").textContent = name + " returns " + ret;
+      document.getElementById("gateword").textContent = word;
+    };
+    document.getElementById("fails").appendChild(b);
+  });
+  const blocks = ["142857","285714","428571","571428","714285","857142","999999"];
+  function paint(s) {
+    document.getElementById("wheel").innerHTML = [...s].map(ch => `<span>${ch}</span>`).join("");
+    requestAnimationFrame(() => document.querySelectorAll(".wheel span").forEach(el => el.classList.add("turn")));
+  }
+  paint(blocks[0]);
+  blocks.forEach((b, n) => {
+    const d = document.createElement("button");
+    d.textContent = (n + 1) + "  " + b;
+    d.onclick = () => paint(b);
+    document.getElementById("muls").appendChild(d);
+  });
+  show();
+</script>
+</body>
+</html>
